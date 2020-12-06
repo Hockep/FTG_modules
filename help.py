@@ -28,7 +28,7 @@ class HelpMod(loader.Module):
                "single_cmd": "\n {}\n",
                "undoc_cmd": "Для этой команды нет документации",
                "all_header": 'Список из <b>{}</b> доступных модулей:\n\n',
-               "mod_tmpl": '\n‣<code><a href="tg://user?id={}">{}</a></code>',
+               "mod_tmpl": '\n‣<code>{}</code>',
                "first_cmd_tmpl": "\n╰( <code>.{}</code>",
                "cmd_tmpl": " | <code>.{}</code>"}
 
@@ -79,7 +79,7 @@ class HelpMod(loader.Module):
                         name = mod.strings("name", message)
                     except KeyError:
                         name = getattr(mod, "name", "ERROR")
-                    reply += self.strings("mod_tmpl", message).format(id, name)
+                    reply += self.strings("mod_tmpl", message).format(name)
                     first = True
                     commands = [name for name, func in mod.commands.items()
                                 if await self.allmodules.check_security(message, func)]
