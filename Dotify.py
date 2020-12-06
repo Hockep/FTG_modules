@@ -17,7 +17,7 @@ class DotifyMod(loader.Module):
 	   .cmd <count> + reply to img
 	   the bigger, the slower and bugger
 	   recommended not more 1000"""
-	strings = {"name": "[PRIVATE]Dotify"}
+	strings = {"name": "Dotify"}
 
 	@loader.unrestricted
 	async def dotifycmd(self, message):
