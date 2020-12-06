@@ -1,5 +1,8 @@
-#
-#
+#.calc <то, что нужно посчитать>(или реплай)
+#╰самый простой калькулятор
+#			** - возвести в степень
+#			/ - деление
+#			% - деление по модулю
 
 from .. import loader, utils
 class КукуляторMod(loader.Module):
@@ -7,11 +10,6 @@ class КукуляторMod(loader.Module):
 	strings = {'name': 'Кукулятор'}
 	
 	async def calccmd(self, message):
-		""".calc <выражение или реплай на то, что нужно посчитать>
-			Кстати:
-			** - возвести в степень
-			/ - деление
-			% - деление по модулю"""
 		question = utils.get_args_raw(message)
 		reply = await message.get_reply_message()
 		if not question:
