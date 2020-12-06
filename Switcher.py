@@ -1,3 +1,7 @@
+#.switch <текст или реплай>
+#^меняет раскладку сообщения
+
+
 # -*- coding: utf-8 -*-
 
 #   Friendly Telegram (telegram userbot)
