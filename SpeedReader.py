@@ -1,3 +1,6 @@
+#.sr <текст или реплйн на текст>
+#╰тренировка скорочтения
+
 # -*- coding: utf-8 -*-
 
 #   Friendly Telegram (telegram userbot)
