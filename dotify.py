@@ -1,3 +1,7 @@
+#.dotify <аргс> + реплю
+#╰Имаге то РГБ дотс
+
+
 from PIL import Image, ImageDraw
 import io
 import asyncio
@@ -21,13 +25,7 @@ class DotifyMod(loader.Module):
 		reply, pix = await parse(message)
 		if reply:
 			await dotify(message, reply, pix, mode)
-	async def dotificmd(self, message):
-		"""Image to BW dots """
-		mode = True
-		reply, pix = await parse(message)
-		if reply:
-			await dotify(message, reply, pix, mode)
-	
+			
 async def parse(message):
 	reply = await message.get_reply_message()
 	if not reply:
